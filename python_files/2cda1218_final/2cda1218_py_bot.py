@@ -30,7 +30,7 @@ def get_mikuji():
 def generate_omikuji():
     fortune = get_mikuji()
     sentence = generator(f"今日の運勢は{fortune}です!ラッキーカラーは",
-                        max_length = 100,          #生成する文の最大文字数
+                        max_length = 100,          #生成する文の最大トークン数
                         num_return_sequences = 1,  #生成する文章の数
                         truncation = True,         #最大値を越える際にテキストを切り落としエラーを回避する
                         no_repeat_ngram_size = 2,  #変なスタックをして連続した記号にならないようにする
